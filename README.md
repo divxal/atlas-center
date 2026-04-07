@@ -64,16 +64,6 @@ cd atlas-center
 npm install
 ```
 
-### Assets (not included)
-
-Place your own video files in `public/assets/`:
-
-```
-public/assets/
-  background.mp4   # looping background video (~6 s recommended)
-  intro.mp4        # intro animation played once on launch (~10 s)
-```
-
 ### Run (development)
 
 ```bash
