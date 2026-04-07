@@ -1,0 +1,53 @@
+.temp-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.temp-row {
+  display: grid;
+  grid-template-columns: 3.5ch 1fr 4ch;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.temp-label { font-size: 0.7rem; color: rgba(255,255,255,0.4); }
+
+.temp-bar-track {
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.temp-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.temp-value {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* Disco */
+.disk-ring-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.disk-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.stat-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+}
+
+.stat-detail span { color: rgba(255,255,255,0.4); }
+.stat-detail strong { color: #fff; font-weight: 500; font-variant-numeric: tabular-nums; }

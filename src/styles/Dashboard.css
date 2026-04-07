@@ -1,0 +1,81 @@
+.dashboard-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tab-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Grid general ── */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  align-content: start;
+}
+
+.monitor-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.span-full {
+  grid-column: 1 / -1;
+}
+
+/* ── Gauge ── */
+.gauge-row { display: flex; align-items: center; gap: 1rem; }
+
+.stat-details { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+
+.stat-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.78rem;
+}
+.stat-detail span   { color: rgba(255,255,255,0.4); }
+.stat-detail strong { color: #fff; font-weight: 500; font-variant-numeric: tabular-nums; }
+
+/* ── Mute ── */
+.mute-btn {
+  margin-top: 0.4rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  letter-spacing: 0.06em;
+}
+.mute-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.mute-btn.muted { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff; }
+
+/* ── LEDs ── */
+.led-row { display: flex; align-items: center; justify-content: space-between; padding: 0.2rem 0; }
+.led-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+
+.led-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.led-toggle.on { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.35); color: #fff; }
+
+.led-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); transition: background 0.15s; }
+.led-toggle.on .led-dot { background: #fff; box-shadow: 0 0 6px rgba(255,255,255,0.8); }

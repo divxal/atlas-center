@@ -1,0 +1,71 @@
+.slider-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.slider-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slider-icon {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.35);
+  min-width: 2.5ch;
+}
+
+.slider-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  flex: 1;
+}
+
+.slider-value {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  min-width: 3ch;
+  text-align: right;
+}
+
+.slider-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.slider-input::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Fill dinámico del slider */
+.slider-input {
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.85) 0%,
+    rgba(255,255,255,0.85) var(--val, 50%),
+    rgba(255,255,255,0.12) var(--val, 50%),
+    rgba(255,255,255,0.12) 100%
+  );
+}

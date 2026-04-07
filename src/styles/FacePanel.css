@@ -1,0 +1,133 @@
+.face-panel {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.2rem 1.5rem;
+}
+
+/* Feed de vídeo */
+.face-feed-wrap {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.face-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  filter: grayscale(1) contrast(1.15) brightness(1.1);
+}
+
+.face-video.visible { display: block; }
+
+.face-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+
+.face-status {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.1em;
+}
+
+.face-status.error { color: rgba(255,100,100,0.8); }
+
+.face-overlay-label {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.5);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Controles */
+.face-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.face-card {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  backdrop-filter: blur(12px);
+}
+
+.face-card-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.35);
+}
+
+.face-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+}
+.face-info-row span  { color: rgba(255,255,255,0.4); }
+.face-info-row strong { color: #fff; font-weight: 500; }
+
+.face-select {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.74rem;
+  padding: 0.35rem 0.5rem;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.face-select option { background: #111; }
+
+.face-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  text-align: center;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.2s;
+}
+
+.face-badge.ok {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+.face-badge.loading {
+  color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.face-badge.error {
+  color: rgba(255,80,80,0.8);
+  border-color: rgba(255,80,80,0.3);
+}

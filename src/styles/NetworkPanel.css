@@ -1,0 +1,82 @@
+.net-panel {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.2rem 1.5rem;
+}
+
+.net-graphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Sparkline */
+.sparkline-wrap { display: flex; flex-direction: column; gap: 0.3rem; }
+
+.sparkline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sparkline-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.35);
+}
+
+.sparkline-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.sparkline-svg { display: block; }
+
+.net-totals {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  margin-top: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Conexiones */
+.conn-list { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.conn-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.conn-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  flex-shrink: 0;
+}
+
+.conn-ip { color: rgba(255,255,255,0.7); font-variant-numeric: tabular-nums; flex: 1; }
+.conn-port { color: rgba(255,255,255,0.3); font-variant-numeric: tabular-nums; }
+.no-conn { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+
+/* Globo */
+.globe-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.globe-container {
+  width: 100%;
+  height: 100%;
+}

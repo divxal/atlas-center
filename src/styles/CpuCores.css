@@ -1,0 +1,39 @@
+.cores-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.core-item {
+  display: grid;
+  grid-template-columns: 2ch 1fr 3.5ch;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.core-id {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.35);
+  font-variant-numeric: tabular-nums;
+}
+
+.core-bar-track {
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.core-bar-fill {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.core-freq {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.55);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
